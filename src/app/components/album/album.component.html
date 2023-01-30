@@ -1,0 +1,14 @@
+<section class="d-flex col-12 flex-row">
+    <div class="albuns-mobile col-6 d-flex align-items-center flex-column" *ngFor="let album of albuns"
+        (click)="goAlbum(album.name)">
+        <img [src]="album.image">
+        <h3>{{album.name}}</h3>
+        <h4>{{album.length}}</h4>
+    </div>
+    <div class="albuns-ipad col-3 d-flex align-items-center flex-column" *ngFor="let album of albuns"
+        (click)="goAlbum(album.name)">
+        <img [src]="album.image">
+        <h3>{{album.name}}</h3>
+        <h4>{{album.length}}</h4>
+    </div>
+</section>

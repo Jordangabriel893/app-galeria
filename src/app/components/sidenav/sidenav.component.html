@@ -1,0 +1,18 @@
+<nav [ngClass]="{'open': openCloseSidenav}">
+  <div class="sidebar">
+    <div class="logo">
+      <i class="bx bx-menu menu-icon" (click)="openCloseSidenav =  false"></i>
+      <span class="logo-name">Álbuns</span>
+    </div>
+    <div class="sidebar-content">
+      <ul class="lists">
+        <li class="list" *ngFor="let name of nameAlbuns" (click)="goAlbum(name)">
+          <a class="nav-link">
+            <span class="link">{{name}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="overlay"></section>

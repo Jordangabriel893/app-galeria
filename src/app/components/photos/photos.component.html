@@ -1,0 +1,24 @@
+<section class="col-12 ">
+  <nav class="justify-content-between">
+    <div class="d-flex ml-0">
+      <div class="logo mr-1 d-flex align-items-center justify-content-center" (click)="goHome()">
+        <i class='bx bx-chevron-left menu-icon'></i>
+      </div>
+      <h1 class="m-0 d-flex align-items-center justify-content-center">Álbuns</h1>
+    </div>
+    <h1 class="mr-4 ">{{album}}</h1>
+  </nav>
+
+  <div class="photos d-flex flex-row flex-wrap p-0   col-12">
+    <div class="photo col-4 p-0 justify-content-center" *ngFor="let item of photos; let i = index">
+      <img [src]="item.image">
+    </div>
+    <div class="photo-desktop col-3 p-0 justify-content-center" *ngFor="let item of photos; let i = index">
+      <img [src]="item.image">
+    </div>
+    <div class="photo-1920x1080 col-2 p-0 justify-content-center" *ngFor="let item of photos; let i = index">
+      <img [src]="item.image">
+    </div>
+
+  </div>
+</section>
